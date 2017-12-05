@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2015, Nordic Semiconductor
   ~ All rights reserved.
   ~
@@ -69,5 +68,6 @@
     <string name="ble_not_supported">Bluetooth Low Energy not supported</string>
     <string name="scan">Scan</string>
     <string name="cancel">Cancel</string>
-    
+    <string name="title_activity_graph">GraphActivity</string>
+
 </resources>
