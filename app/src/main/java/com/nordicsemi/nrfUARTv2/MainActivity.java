@@ -133,7 +133,13 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
             public void run() {
                 String currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
                 listAdapter.add("[" + currentDateTimeString + "] RX: " + text);
+                double dbl = Double.parseDouble(text);
                 messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
+
+                //tutaj ten intent dziwny robie co ma niby przesylac ale wszystko wskazuje na to ze to jest zly przyklad i on sie odpala za kazdym razem jak dostaje pakiet (graf sie odpala)
+                Intent i = new Intent(getApplicationContext(), GraphActivity.class);
+                i.putExtra("RX",dbl);
+                startActivity(i);
 
             }
         });

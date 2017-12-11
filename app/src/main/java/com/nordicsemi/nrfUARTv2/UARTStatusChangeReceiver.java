@@ -36,10 +36,10 @@ public class UARTStatusChangeReceiver extends BroadcastReceiver {
             try {
                 String text = new String(txValue, "UTF-8");
                 Double dbl = Double.parseDouble(text);
-
                 mActivity.mResults.add(dbl);
-                mActivity.mSeries.appendData(new DataPoint(0, dbl), true, 40);
                 mActivity.adjustUiOnDataAvailable(text);
+               // mActivity.mSeries.appendData(new DataPoint(0, dbl), true, 40);
+
             } catch (Exception e) {
             }
         }
